@@ -1,0 +1,15 @@
+{
+  "name": "webpack-5-106-repro",
+  "private": true,
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "license-webpack-plugin": "^2.3.14",
+    "webpack": "5.106.0",
+    "webpack-cli": "5.1.4"
+  },
+  "dependencies": {
+    "react": "18.3.1"
+  }
+}

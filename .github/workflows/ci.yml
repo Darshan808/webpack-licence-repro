@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+
+jobs:
+  webpack-repro:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        package_dir:
+          - package-5.106
+          - package-5.107
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        working-directory: ${{ matrix.package_dir }}
+        run: npm ci --no-audit --no-fund
+
+      - name: Build
+        working-directory: ${{ matrix.package_dir }}
+        run: npm run build
