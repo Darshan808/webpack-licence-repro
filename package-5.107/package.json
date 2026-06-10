@@ -5,7 +5,7 @@
     "build": "webpack"
   },
   "devDependencies": {
-    "license-webpack-plugin": "^2.3.14",
+    "license-webpack-plugin": "^4.0.2",
     "webpack": "5.107.0",
     "webpack-cli": "5.1.4"
   },
